@@ -8,7 +8,39 @@
             --> content goes here <--
         </div>
         <div class="main-header">
-                icone ciao ciao ciao ciaocisidpoejfefewfwefefwewefwefewf
+                <ul>
+                    <li>
+                        <a href="">
+                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+                        DIGITAL COMICS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
+                        DC MERCHANDISE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+                        SUBSCRIPTION
+                        </a>
+                    </li>
+                    <li class="img-locator">
+                        <a href="">
+                        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+                        COMIC SHOP LOCATOR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+                        DC POWER VISA
+                        </a>
+                    </li>
+
+                </ul>
         </div>
         <div class="main">
             <div>
@@ -81,7 +113,25 @@ section{
             padding-left: 200px;
             height: 15vh;
             background-color: $blue;
+            ul{
+                width: 80%;
+                @include flex(row,center,center);
+            }
+
+            li a{
+                @include flex(row,center,center);
+                color: $white;
+                font-size: 0.5rem;
+            }
+            img{
+                width: 20%;
+                margin-right: 10px;
+            }
+            .img-locator{
+                width: 15%;    
+            }
         }
+        
         .main{
             @include flex(row,start,start);
             font-family: sans-serif;

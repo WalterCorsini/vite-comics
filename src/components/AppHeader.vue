@@ -39,7 +39,7 @@ header{
     @include flex(row,center,center);
     flex-grow: 1;
     img{
-        width: 10%;
+        width: 18%;
     }
 }
 

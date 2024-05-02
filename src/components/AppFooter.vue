@@ -9,10 +9,10 @@
             <span>FOLLOW US</span>
             <ul>
                 <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-twitter.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-youtube.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-periscope.png" alt=""></a></li>
             </ul>
         </div>
     </div>
@@ -41,8 +41,11 @@
         }
         .footer-list,
         ul{
-            @include flex(row,center,center);
-            gap: 10px;
+            @include flex(row,space-around,center);
+        }
+
+        li{
+            width: 10%;
         }
     }
 </style>
