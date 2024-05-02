@@ -8,7 +8,7 @@
             --> content goes here <--
         </div>
         <div class="main-header">
-                icone
+                icone ciao ciao ciao ciaocisidpoejfefewfwefefwewefwefewf
         </div>
         <div class="main">
             <div>
@@ -53,6 +53,9 @@
                     <li><a href="">Dc Power Visa</a></li>
                 </ul>
             </div>
+            <div class="main-img">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
         </div>
     </section>
 </template>
@@ -65,6 +68,7 @@ section{
     width: 100%;
     .header{
             @include flex(row,start,center);
+            position: relative;
             background-color: $black;
             height: 10vh;
             padding-left: 200px;
@@ -72,6 +76,8 @@ section{
         color: $white;
         .main-header{
             @include flex(row,start,center);
+            position: relative;
+            z-index: 9999;
             padding-left: 200px;
             height: 15vh;
             background-color: $blue;
@@ -98,7 +104,14 @@ section{
                     background-color: $white;
                     color: $black;
                 }
-            };
+            }
+            .main-img{
+                position: absolute;
+                top: 30%;
+                right: 15%;
+                width: 30%;
+            }
+            
         }
     }
 </style>

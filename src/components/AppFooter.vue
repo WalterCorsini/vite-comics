@@ -3,10 +3,46 @@
 </script>
 
 <template>
-
+    <div class="footer">
+        <span class="button">SIGN UP NOW</span>
+        <div class="footer-list">
+            <span>FOLLOW US</span>
+            <ul>
+                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-// @use "../style/partials/variables" as *;
-// @use "../style/partials/mixin" as *;
+@use "../style/partials/variable" as *;
+@use "../style/partials/mixin" as *;
+    .footer{
+        @include flex(row,space-around,center);
+        position: relative;
+        gap: 100px;
+        z-index: 9999;
+        height: 10vh;
+        width: 100%;
+        font-family: sans-serif;
+        font-weight: 700;
+        background-color: $darkgrey;
+        .button{
+            padding: 5px;
+            border: 3px solid $blue;
+            color: $white;
+        }
+        .footer-list{
+            color: $blue;
+        }
+        .footer-list,
+        ul{
+            @include flex(row,center,center);
+            gap: 10px;
+        }
+    }
 </style>
