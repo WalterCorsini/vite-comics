@@ -20,7 +20,6 @@ export default {
 <template>
     <AppHeader />
     <AppMain />
-    <AppMainHeader />
     <AppFooter />
 </template>
 

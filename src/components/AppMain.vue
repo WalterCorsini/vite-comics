@@ -1,5 +1,37 @@
 <script>
-
+export default{
+    data(){
+        return{
+            image:[
+                {
+                    image: "buy-comics-digital-comics.png",
+                    title: "DIGITAL COMISCS",
+                },
+                {
+                    image: "buy-comics-merchandise.png",
+                    title: "DC MERCHANDISE",
+                },
+                {
+                    image: "buy-comics-subscriptions.png",
+                    title: "SUBSCRIPTION",
+                },
+                {
+                    image: "buy-comics-shop-locator.png",
+                    title: "COMIC SHOP LOCATOR",
+                },
+                {
+                    image: "buy-dc-power-visa.svg",
+                    title: "DC POWER VISA",
+                },
+                   ] 
+        }
+    },
+    methods:{
+        dynamicImage: function(curImg){
+            return new URL(`../assets/img/${curImg}`, import.meta.url).href;
+        }
+    },
+}
 </script>
 
 <template>
@@ -9,38 +41,14 @@
         </div>
         <div class="main-header">
                 <ul>
-                    <li>
+                    <li v-for="img in image">
                         <a href="">
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                        DIGITAL COMICS
-                        </a>
+                        <img :src="dynamicImage(img.image)" alt="" />
+                        {{ img.title }}
+                    </a>
                     </li>
-                    <li>
-                        <a href="">
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                        DC MERCHANDISE
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        SUBSCRIPTION
-                        </a>
-                    </li>
-                    <li class="img-locator">
-                        <a href="">
-                        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-                        COMIC SHOP LOCATOR
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        DC POWER VISA
-                        </a>
-                    </li>
-
                 </ul>
+            
         </div>
         <div class="main">
             <div>
@@ -115,27 +123,24 @@ section{
             background-color: $blue;
             ul{
                 width: 80%;
-                @include flex(row,center,flex-end);
-            }
-            li{
-                padding: 22px;
-                border-bottom: 5px solid transparent;
-                &:hover{
-                    border-bottom: 5px solid black;
+                @include flex(row,space-between,center);
+                li:first-child{
+                    width: 5%;
+                }
+                li:nth-child(4){
+                    width: 4%;
+                }
+                li{
+                    width: 6%;
                 }
             }
-            li a{
+            a{
                 @include flex(row,center,center);
+                gap: 10px;
                 color: $white;
                 font-size: 0.5rem;
             }
-            img{
-                width: 20%;
-                margin-right: 10px;
-            }
-            .img-locator{
-                width: 15%;    
-            }
+
         }
         
         .main{

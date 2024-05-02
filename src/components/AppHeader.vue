@@ -1,6 +1,59 @@
 <script>
 export default {
-
+    data(){
+        return{
+            count:0,
+            menu:[
+                {
+                    title:"CHARACTERS",
+                    active:true,
+                },
+                {
+                    title:"COMICS",
+                    active:false,
+                },
+                {
+                    title:"MOVIES",
+                    active:false,
+                },
+                {
+                    title:"TV",
+                    active:false,
+                },
+                {
+                    title:"GAMES",
+                    active:false,
+                },
+                {
+                    title:"COLLECTIBLES",
+                    active:false,
+                },
+                {
+                    title:"VIDEOS",
+                    active:false,
+                },
+                {
+                    title:"FANS",
+                    active:false,
+                },
+                {
+                    title:"NEWS",
+                    active:false,
+                },
+                {
+                    title:"SHOP",
+                    active:false,
+                },
+            ]
+        }
+    },
+    methods:{
+        changeActive: function(index){
+            this.menu[this.count].active = false;
+            this.count = index;
+            this.menu[this.count].active = true;
+        }
+    }
 }
 </script>
 
@@ -10,16 +63,7 @@ export default {
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
         <ul class="nav">
-            <li><a href="">CHARACTERS</a></li>
-            <li><a href="">COMICS</a></li>
-            <li><a href="">MOVIES</a></li>
-            <li><a href="">TV</a></li>
-            <li><a href="">GAMES</a></li>
-            <li><a href="">COLLECTIBLES</a></li>
-            <li><a href="">VIDEOS</a></li>
-            <li><a href="">FANS</a></li>
-            <li><a href="">NEWS</a></li>
-            <li><a href="">SHOP</a></li>
+            <li :class="{active: curElem.active}" v-for="curElem,i in menu"><a @click.prevent.stop="changeActive(i)" href="">{{curElem.title}}</a></li>
         </ul>
     </header>
 </template>
@@ -56,11 +100,9 @@ header {
         font-size: 0.8rem;
         font-weight: 700;
         border-bottom: 5px solid transparent;
-
-        &:hover {
-            border-bottom: 5px solid $blue;
-        }
     }
-
+    .active{
+        border-bottom: 5px solid $blue;
+    }
 }
 </style>
