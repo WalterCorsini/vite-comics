@@ -10,16 +10,16 @@ export default{
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
         <ul class="nav">
-            <li>CHARACTERS</li>
-            <li>COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li>
+            <li><a href="">CHARACTERS</a></li>
+            <li><a href="">COMICS</a></li>
+            <li><a href="">MOVIES</a></li>
+            <li><a href="">TV</a></li>
+            <li><a href="">GAMES</a></li>
+            <li><a href="">COLLECTIBLES</a></li>
+            <li><a href="">VIDEOS</a></li>
+            <li><a href="">FANS</a></li>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">SHOP</a></li>
         </ul>
     </header>
 </template>
@@ -31,7 +31,7 @@ export default{
 header{
     @include flex(row,space-between,center);
     padding: 20px;
-    height: 100px;
+    height: 15vh;
     background-color: $white;
 }
 
@@ -49,7 +49,7 @@ header{
     width: 60%;
     margin-right: 100px;
     li{
-        padding: 40px 0;
+        padding: 32px 0;
         font-family: sans-serif;
         font-size: 0.8rem;
         font-weight: 700;
