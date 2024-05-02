@@ -4,13 +4,13 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 
 export default {
-    components:{
+    components: {
         AppHeader,
         AppMain,
         AppFooter,
     },
-    data(){
-        return{
+    data() {
+        return {
             image: "ciao",
         }
     }
@@ -24,5 +24,4 @@ export default {
     <AppFooter />
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

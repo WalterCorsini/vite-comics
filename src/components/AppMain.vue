@@ -115,9 +115,15 @@ section{
             background-color: $blue;
             ul{
                 width: 80%;
-                @include flex(row,center,center);
+                @include flex(row,center,flex-end);
             }
-
+            li{
+                padding: 22px;
+                border-bottom: 5px solid transparent;
+                &:hover{
+                    border-bottom: 5px solid black;
+                }
+            }
             li a{
                 @include flex(row,center,center);
                 color: $white;

@@ -1,5 +1,5 @@
 <script>
-export default{
+export default {
 
 }
 </script>
@@ -28,33 +28,36 @@ export default{
 @use "../style/partials/variable" as *;
 @use "../style/partials/mixin" as *;
 
-header{
-    @include flex(row,space-between,center);
+header {
+    @include flex(row, space-between, center);
     padding: 20px;
     height: 15vh;
     background-color: $white;
 }
 
-.img-header{
-    @include flex(row,center,center);
+.img-header {
+    @include flex(row, center, center);
     flex-grow: 1;
-    img{
+
+    img {
         width: 18%;
     }
 }
 
-.nav{
-    @include flex(row,end,center);
+.nav {
+    @include flex(row, end, center);
     gap: 20px;
     width: 60%;
     margin-right: 100px;
-    li{
+
+    li {
         padding: 32px 0;
         font-family: sans-serif;
         font-size: 0.8rem;
         font-weight: 700;
         border-bottom: 5px solid transparent;
-        &:hover{
+
+        &:hover {
             border-bottom: 5px solid $blue;
         }
     }
