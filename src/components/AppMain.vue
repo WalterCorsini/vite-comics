@@ -117,6 +117,7 @@ section{
             z-index: 9999;
             padding-left: 200px;
             height: 15vh;
+            line-height: 15vh;
             background-color: $blue;
             ul{
                 height: 100%;
@@ -125,7 +126,6 @@ section{
                 li{
                     height: 100%;
                     width: calc(100% / 5);
-                    padding-top: 22px;
                     img{
                         width: 20%;
                     }

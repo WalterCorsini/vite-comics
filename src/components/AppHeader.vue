@@ -76,6 +76,7 @@ header {
     @include flex(row, space-between, center);
     padding: 20px;
     height: 15vh;
+    line-height: 15vh;
     background-color: $white;
 }
 
@@ -95,14 +96,14 @@ header {
     margin-right: 100px;
 
     li {
-        padding: 32px 0;
+        // padding: 32px 0;
         font-family: sans-serif;
         font-size: 0.8rem;
         font-weight: 700;
-        border-bottom: 5px solid transparent;
+        border-bottom: 10px solid transparent;
     }
     .active{
-        border-bottom: 5px solid $blue;
+        border-bottom: 10px solid $blue;
     }
 }
 </style>
