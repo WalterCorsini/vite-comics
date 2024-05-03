@@ -1,12 +1,16 @@
 <script>
-
+    export default{
+        props:{
+            title:String,
+        }
+    }
 </script>
 
 <template>
     <div>
         <span>
             <a @click.prevent href="">
-                LOAD MORE
+                {{ title }}
             </a>
         </span>
     </div>
@@ -18,7 +22,6 @@
 div{
     padding-top: 20px;
     height: 10vh;
-    background-color: $black;
     text-align: center;
     a{
         padding: 5px 30px;

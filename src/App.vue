@@ -102,7 +102,9 @@ export default {
     <!-- top background subHeader -->
     <div class="container">
         <div class="background-subheader">
-            <img src="./assets/img/sfondo-dc-comics.png" alt="">
+            <div class="button-subheader">
+                <AppButton title="CURRENT SERIES"/>
+            </div>
         </div>
         
         <!-- components subHeader -->
@@ -115,8 +117,9 @@ export default {
     </div>
 
     <!-- components button -->
-    <AppButton />
-
+    <div class="bg-black">
+    <AppButton title="LOAD MORE"/>
+    </div>
     <!-- components main -->
     <AppMain />
 
@@ -132,8 +135,17 @@ export default {
     width: 100%;
     height: min-content;
     background-color: $black;
-    .background.subheader {
-        width: 100%;
+    .background-subheader {
+        position: relative;
+        background-image: url(./assets/img/jumbotron.jpg);
+        height: 50vh;
+        background-size: cover;
+        margin-bottom: 20px;
+        .button-subheader{
+            position: absolute;
+            bottom: -7%;
+            left: 10%;
+        }
     }
 
     .card-container {
@@ -147,5 +159,8 @@ export default {
     .card {
         height: min-content;
     }
+}
+.bg-black{
+    background-color: $black;
 }
 </style>
