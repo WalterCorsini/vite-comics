@@ -36,9 +36,6 @@ export default{
 
 <template>
     <section>
-        <div class="header">
-            --> content goes here <--
-        </div>
         <div class="main-header">
                 <ul>
                     <li v-for="img,i in image">
@@ -162,7 +159,7 @@ section{
             padding-top: 10px;
             gap: 30px;
             background-image: url(../assets/img/footer-bg.jpg);
-            height: 50vh;
+            height: 60vh;
             h3{
                 margin: 20px 0;
             }
@@ -179,9 +176,9 @@ section{
             }
             .main-img{
                 position: absolute;
-                top: 30%;
+                top: 20%;
                 right: 15%;
-                width: 30%;
+                width: 35%;
             }
             
         }
