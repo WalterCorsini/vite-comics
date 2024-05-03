@@ -41,9 +41,9 @@ export default{
         </div>
         <div class="main-header">
                 <ul>
-                    <li v-for="img in image">
+                    <li v-for="img,i in image">
                         <a href="">
-                        <img :src="dynamicImage(img.image)" alt="" />
+                        <img :class="i === 0 || i === 3 ? 'big-img' : ''" :src="dynamicImage(img.image)" alt="" />
                         {{ img.title }}
                     </a>
                     </li>
@@ -122,17 +122,28 @@ section{
             height: 15vh;
             background-color: $blue;
             ul{
+                height: 100%;
                 width: 80%;
                 @include flex(row,space-between,center);
-                li:first-child{
-                    width: 5%;
-                }
-                li:nth-child(4){
-                    width: 4%;
-                }
                 li{
-                    width: 6%;
+                    height: 100%;
+                    width: calc(100% / 5);
+                    padding-top: 22px;
+                    img{
+                        width: 20%;
+                    }
+                    &:hover{
+                        border-bottom: 5px solid black;
+                    }
                 }
+                .big-img{
+                    width: 15%;
+                }
+                .four-img{
+                    width: 10%;
+                }
+                
+
             }
             a{
                 @include flex(row,center,center);
