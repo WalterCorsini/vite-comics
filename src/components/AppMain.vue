@@ -23,9 +23,9 @@ export default{
                     image: "buy-dc-power-visa.svg",
                     title: "DC POWER VISA",
                 },
-                   ] 
+            ] 
         }
-    },
+    },  
     methods:{
         dynamicImage: function(curImg){
             return new URL(`../assets/img/${curImg}`, import.meta.url).href;
@@ -153,6 +153,7 @@ section{
         
         .main{
             @include flex(row,start,start);
+            position: relative;
             font-family: sans-serif;
             font-size: 8px;
             padding-left: 200px;
@@ -176,9 +177,9 @@ section{
             }
             .main-img{
                 position: absolute;
-                top: 20%;
+                top: -20%;
                 right: 15%;
-                width: 35%;
+                width: 35vw;
             }
             
         }
