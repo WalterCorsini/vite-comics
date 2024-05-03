@@ -15,8 +15,8 @@ export default {
     },
     data() {
         return {
-            image: "ciao",
-            array: [
+            // hero array
+            arrayComics: [
                 {
                     "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     "price": "$19.99",
@@ -96,22 +96,31 @@ export default {
 </script>
 
 <template>
+    <!-- components Header -->
     <AppHeader />
 
+    <!-- top background subHeader -->
     <div class="container">
         <div class="background-subheader">
             <img src="./assets/img/sfondo-dc-comics.png" alt="">
         </div>
-        <div class="card-container">
-            <AppSubHeader class="card" v-for="curElem in array" :elemImage="curElem.thumb"
+        
+        <!-- components subHeader -->
+        <div class="card-container"> 
+            <AppSubHeader
+                class="card"
+                v-for="curElem in arrayComics" :elemImage="curElem.thumb"
                 :elemSeries="curElem.series" />
         </div>
     </div>
 
+    <!-- components button -->
     <AppButton />
 
+    <!-- components main -->
     <AppMain />
 
+    <!-- components footer -->
     <AppFooter />
 </template>
 

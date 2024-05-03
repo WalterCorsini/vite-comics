@@ -8,10 +8,12 @@ export default {
 </script>
 
 <template>
+    <!-- card -->
         <div class="card">
             <img :src="elemImage">
             <span>{{ elemSeries }}</span>
         </div>
+        <!-- /card -->
 </template>
 
 <style lang="scss" scoped>

@@ -35,7 +35,9 @@ export default{
 </script>
 
 <template>
+
     <section>
+        <!-- blue row with icon -->
         <div class="main-header">
                 <ul>
                     <li v-for="img,i in image">
@@ -47,6 +49,9 @@ export default{
                 </ul>
             
         </div>
+        <!-- /blue row with icon -->
+
+        <!-- section with list -->
         <div class="main">
             <div>
                 <h3>DC COMICS</h3>
@@ -94,6 +99,8 @@ export default{
                 <img src="../assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
+        <!-- /section with list -->
+
     </section>
 </template>
 
@@ -120,9 +127,9 @@ section{
             line-height: 15vh;
             background-color: $blue;
             ul{
+                @include flex(row,space-between,center);
                 height: 100%;
                 width: 80%;
-                @include flex(row,space-between,center);
                 li{
                     height: 100%;
                     width: calc(100% / 5);

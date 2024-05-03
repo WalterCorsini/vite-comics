@@ -4,7 +4,11 @@
 
 <template>
     <div>
-    <span><a @click.prevent href="">LOAD MORE</a></span>
+        <span>
+            <a @click.prevent href="">
+                LOAD MORE
+            </a>
+        </span>
     </div>
 </template>
 
@@ -22,5 +26,4 @@ div{
         color: $white;
     }
 }
-
 </style>

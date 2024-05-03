@@ -2,7 +2,9 @@
 export default {
     data() {
         return {
+            //  active nav item
             count: 1,
+            // array nav bar
             menu: [
                 {
                     title: "CHARACTERS",
@@ -47,6 +49,7 @@ export default {
             ]
         }
     },
+    //  to change active item
     methods: {
         changeActive: function (index) {
             this.menu[this.count].active = false;
@@ -59,13 +62,20 @@ export default {
 
 <template>
     <header>
+        
+        <!-- logo -->
         <div class="img-header">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
+        <!-- /logo -->
+
+        <!-- nav-list -->
         <ul class="nav">
             <li :class="{ active: curElem.active }" v-for="curElem, i in menu"><a @click.prevent.stop="changeActive(i)"
                     href="">{{ curElem.title }}</a></li>
         </ul>
+        <!-- /nav-list -->
+
     </header>
 </template>
 
@@ -94,7 +104,6 @@ header {
         margin-right: 100px;
 
         li {
-            // padding: 32px 0;
             font-family: sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
