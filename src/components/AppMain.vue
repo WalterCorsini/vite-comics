@@ -87,7 +87,7 @@ section{
             @include flex(row,start,start);
             position: relative;
             font-family: sans-serif;
-            font-size: 8px;
+            font-size: 12px;
             padding-left: 200px;
             padding-top: 10px;
             gap: 30px;
@@ -102,7 +102,6 @@ section{
             a{
                 color: $lightgrey;
                 &:hover{
-                    text-decoration: underline;
                     background-color: $white;
                     color: $black;
                 }
