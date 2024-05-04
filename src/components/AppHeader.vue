@@ -22,7 +22,7 @@ export default {
 
 <template>
     <header>
-        
+
         <!-- logo -->
         <div class="img-header">
             <img src="../assets/img/dc-logo.png" alt="">
@@ -52,6 +52,7 @@ header {
     .img-header {
         @include flex(row, center, center);
         flex-grow: 1;
+
         img {
             width: 18%;
         }

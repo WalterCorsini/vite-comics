@@ -33,31 +33,34 @@
     font-weight: 700;
     background-color: $darkgrey;
 
-    .button{
+    .button {
         padding: 5px;
         border: 3px solid $blue;
         transition: 1s;
         color: $white;
+
         &:hover {
             background-color: $white;
             color: $black;
             border-radius: 20px;
             transition: 1s;
         }
-
     }
 
-    .footer-list a {
-        color: $blue;
-    }
-
-    .footer-list,
-    ul {
+    .footer-list {
         @include flex(row, space-around, center);
-    }
 
-    li {
-        width: 10%;
+        a {
+            color: $blue;
+        }
+
+        ul {
+            @include flex(row, space-around, center);
+
+            li {
+                width: 10%;
+            }
+        }
     }
 }
 </style>

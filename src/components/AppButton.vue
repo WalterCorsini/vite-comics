@@ -1,35 +1,37 @@
 <script>
-    export default{
-        props:{
-            title:String,
-        }
+export default {
+    props: {
+        title: String,
     }
+}
 </script>
 
 <template>
     <div>
-            <a @click.prevent href="">
-                {{ title }}
-            </a>
+        <a @click.prevent href="">
+            {{ title }}
+        </a>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variable" as *;
 @use "../style/partials/mixin" as *;
-div{
+
+div {
     background-color: $blue;
     padding: 10px 20px;
     margin-bottom: 10px;
     text-align: center;
     transition: 1s;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
         border-radius: 20px;
         transition: 1s;
     }
-    
-    a{
+
+    a {
         color: $white;
     }
 }

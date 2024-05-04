@@ -16,30 +16,31 @@ export default {
 
 <template>
     <div class="container">
-    <div class="card-container">
-        <!-- card -->
-        <div class="card" v-for="curElem in array">
-            <img :src="`${curElem.thumb}`" :class="curElem.type === 'comic-book' ? 'comic-book' : 'graphic-novel'">
-            <span>{{ curElem.series }}</span>
+        <div class="card-container">
+
+            <!-- card -->
+            <div class="card" v-for="curElem in array">
+                <img :src="`${curElem.thumb}`" :class="curElem.type === 'comic-book' ? 'comic-book' : 'graphic-novel'">
+                <span>{{ curElem.series }}</span>
+            </div>
+            <!-- /card -->
+
+            <!-- components button -->
+
+            <AppButton title="LOAD MORE" />
         </div>
-        <!-- /card -->
-
-        <!-- components button -->
-
-        <AppButton title="LOAD MORE" />
     </div>
-</div>
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variable" as *;
 @use "../style/partials/mixin" as *;
 
-    .container{
-        width: 100%;
-        height: min-content;
-        background-color: $black;
-    }
+.container {
+    width: 100%;
+    height: min-content;
+    background-color: $black;
+
     .card-container {
         @include flex(row, center, center);
         width: 80%;
@@ -85,9 +86,6 @@ export default {
                 align-self: flex-start;
             }
         }
-
-        .bg-black {
-            background-color: $black;
-        }
     }
+}
 </style>
