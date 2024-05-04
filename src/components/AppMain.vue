@@ -20,26 +20,26 @@ export default {
             <div>
                 <h3>{{ list1.title }}</h3>
                 <ul v-for="CurElem in list1.list">
-                    <li href=""><a>{{ CurElem }}</a></li>
+                    <li href=""><a @click.prevent href="">{{ CurElem }}</a></li>
                 </ul>
 
                 <h3>{{ list2.title }}</h3>
                 <ul v-for="CurElem in list2.list">
-                    <li href=""><a>{{ CurElem }}</a></li>
+                    <li href=""><a @click.prevent href="">{{ CurElem }}</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3>{{ list3.title }}</h3>
                 <ul>
-                    <li v-for="CurElem in list3.list" href=""><a>{{ CurElem }}</a></li>
+                    <li v-for="CurElem in list3.list" href=""><a @click.prevent href="">{{ CurElem }}</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3>{{ list4.title }}</h3>
                 <ul>
-                    <li v-for="CurElem in list4.list" href=""><a>{{ CurElem }}</a></li>
+                    <li v-for="CurElem in list4.list" href=""><a @click.prevent href="">{{ CurElem }}</a></li>
                 </ul>
             </div>
 

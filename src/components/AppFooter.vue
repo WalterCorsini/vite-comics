@@ -1,18 +1,14 @@
-<script>
-
-</script>
-
 <template>
     <div class="footer">
-        <a href=""><span class="button">SIGN UP NOW</span></a>
+        <a @click.prevent href=""><span class="button">SIGN UP NOW</span></a>
         <div class="footer-list">
-            <span><a href="">FOLLOW US</a></span>
+            <a @click.prevent href=""><span>FOLLOW US</span></a>
             <ul>
-                <li><a href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-twitter.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-youtube.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
-                <li><a href=""><img src="../assets/img/footer-periscope.png" alt=""></a></li>
+                <li><a @click.prevent href=""><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                <li><a @click.prevent href=""><img src="../assets/img/footer-twitter.png" alt=""></a></li>
+                <li><a @click.prevent href=""><img src="../assets/img/footer-youtube.png" alt=""></a></li>
+                <li><a @click.prevent href=""><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
+                <li><a @click.prevent href=""><img src="../assets/img/footer-periscope.png" alt=""></a></li>
             </ul>
         </div>
     </div>

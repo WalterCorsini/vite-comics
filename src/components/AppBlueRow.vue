@@ -18,7 +18,7 @@ export default {
     <div class="main-header">
         <ul>
             <li v-for="img, i in image">
-                <a href="">
+                <a @click.prevent href="">
                     <img :class="i === 0 || i === 3 ? 'big-img' : ''" :src="dynamicImage(img.image)" alt="" />
                     {{ img.title }}
                 </a>
