@@ -12,7 +12,7 @@ export default {
     <!-- card -->
         <div class="card">
             <img :src="elemImage"
-            :class="elemType === 'comic book' ? 'comic-book' : 'graphic-novel'">
+            :class="elemType === 'comic-book' ? 'comic-book' : 'graphic-novel'">
             <span>{{ elemSeries }}</span>
         </div>
         <!-- /card -->
@@ -37,10 +37,10 @@ export default {
         }
     }
     .comic-book{
-        border:1px solid red;
+        border:2px solid red;
     }
     .graphic-novel{
-        border:1px solid green;
+        border:2px solid green;
     }
     span{
         display: inline-block;
