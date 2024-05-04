@@ -32,6 +32,9 @@ export default {
         width: 10vw;
         height: 26vh;
         margin-bottom: 10px;
+        &:hover{
+            transform:scale(1.1);
+        }
     }
     .comic-book{
         border:1px solid red;

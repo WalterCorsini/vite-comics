@@ -8,11 +8,9 @@
 
 <template>
     <div>
-        <span>
             <a @click.prevent href="">
                 {{ title }}
             </a>
-        </span>
     </div>
 </template>
 
@@ -20,12 +18,18 @@
 @use "../style/partials/variable" as *;
 @use "../style/partials/mixin" as *;
 div{
-    padding-top: 20px;
-    height: 10vh;
+    background-color: $blue;
+    padding: 10px 20px;
+    margin-bottom: 10px;
     text-align: center;
+    transition: 1s;
+    &:hover{
+        transform: scale(1.1);
+        border-radius: 20px;
+        transition: 1s;
+    }
+    
     a{
-        padding: 5px 30px;
-        background-color: $blue;
         color: $white;
     }
 }

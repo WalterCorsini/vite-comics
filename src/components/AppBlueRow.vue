@@ -70,7 +70,8 @@ export default{
                         width: 20%;
                     }
                     &:hover{
-                        border-bottom: 5px solid black;
+                        transform: scale(1.1);
+                        border-bottom: 5px solid $white;
                     }
                 }
                 .big-img{

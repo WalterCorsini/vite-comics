@@ -4,7 +4,7 @@
 
 <template>
     <div class="footer">
-        <span class="button"><a href="">SIGN UP NOW</a></span>
+        <a href=""><span class="button">SIGN UP NOW</span></a>
         <div class="footer-list">
             <span><a href="">FOLLOW US</a></span>
             <ul>
@@ -33,15 +33,18 @@
     font-weight: 700;
     background-color: $darkgrey;
 
-    .button a {
+    .button{
         padding: 5px;
         border: 3px solid $blue;
+        transition: 1s;
         color: $white;
-
         &:hover {
             background-color: $white;
             color: $black;
+            border-radius: 20px;
+            transition: 1s;
         }
+
     }
 
     .footer-list a {
