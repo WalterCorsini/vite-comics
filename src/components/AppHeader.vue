@@ -1,52 +1,12 @@
 <script>
+import { menuNav } from '../assets/data/products';
 export default {
     data() {
         return {
             //  active nav item
             count: 1,
             // array nav bar
-            menu: [
-                {
-                    title: "CHARACTERS",
-                    active: false,
-                },
-                {
-                    title: "COMICS",
-                    active: true,
-                },
-                {
-                    title: "MOVIES",
-                    active: false,
-                },
-                {
-                    title: "TV",
-                    active: false,
-                },
-                {
-                    title: "GAMES",
-                    active: false,
-                },
-                {
-                    title: "COLLECTIBLES",
-                    active: false,
-                },
-                {
-                    title: "VIDEOS",
-                    active: false,
-                },
-                {
-                    title: "FANS",
-                    active: false,
-                },
-                {
-                    title: "NEWS",
-                    active: false,
-                },
-                {
-                    title: "SHOP",
-                    active: false,
-                },
-            ]
+            menu: menuNav,
         }
     },
     //  to change active item

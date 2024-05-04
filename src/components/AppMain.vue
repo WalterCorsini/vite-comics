@@ -1,7 +1,12 @@
 <script>
+import { listArray1, listArray2, listArray3, listArray4 } from '../assets/data/products';
 export default{
     data(){
         return{
+            list1: listArray1,
+            list2: listArray2,
+            list3: listArray3,
+            list4: listArray4,
         }
     },  
 
@@ -17,47 +22,31 @@ export default{
         <!-- section with list -->
         <div class="main">
             <div>
-                <h3>DC COMICS</h3>
-                <ul>
-                    <li><a href="">Characters</a></li>
-                    <li><a href="">Comics</a></li>
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">tv</a></li>
-                    <li><a href="">Games</a></li>
-                    <li><a href="">video</a></li>
-                    <li><a href="">News</a></li>
+                <h3>{{ list1.title }}</h3>
+                <ul v-for="CurElem in list1.list">
+                    <li href="" ><a>{{ CurElem }}</a></li>
                 </ul>
-                <h3>SHOP</h3>
-                <ul>
-                    <li><a href="">Shop Dc</a></li>
-                    <li><a href="">Shop Dc Collectibles</a></li>
+
+                <h3>{{ list2.title }}</h3>
+                <ul v-for="CurElem in list2.list">
+                    <li href="" ><a>{{ CurElem }}</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>DC</h3>
-                <li><a href="">Terms Of Use</a></li>
-                <li><a href="">Privacy policy(New)</a></li>
-                <li><a href="">Ad Choices</a></li>
-                <li><a href="">Advertising</a></li>
-                <li><a href="">Jobs</a></li>
-                <li><a href="">Subscriptions</a></li>
-                <li><a href="">Talent WorkShops</a></li>
-                <li><a href="">CPSC Certificates</a></li>
-                <li><a href="">Ratings</a></li>
-                <li><a href="">Shop Help</a></li>
-                <li><a href="">contact Us</a></li>
             </div>
 
             <div>
-                <h3>SITES</h3>
+                <h3>{{ list3.title }}</h3>
                 <ul>
-                    <li><a href="">DC</a></li>
-                    <li><a href="">MAD Magazines</a></li>
-                    <li><a href="">DC Kids</a></li>
-                    <li><a href="">Dc Universe</a></li>
-                    <li><a href="">Dc Power Visa</a></li>
+                    <li v-for="CurElem in list3.list" href="" ><a>{{ CurElem }}</a></li>
                 </ul>
             </div>
+
+            <div>
+                <h3>{{ list4.title }}</h3>
+                <ul>
+                    <li v-for="CurElem in list4.list" href="" ><a>{{ CurElem }}</a></li>
+                </ul>
+            </div>
+            
             <div class="main-img">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
             </div>
