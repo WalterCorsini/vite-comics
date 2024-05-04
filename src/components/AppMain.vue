@@ -16,9 +16,6 @@ export default{
 <template>
 
     <section>
-        <!-- blue row with icon -->
-        <!-- /blue row with icon -->
-
         <!-- section with list -->
         <div class="main">
             <div>

@@ -9,25 +9,27 @@ export default{
 
 <template>
 <div class="container">
-    <img src="../assets/img/jumbotron.jpg" alt="">
+    <!-- <img src="../assets/img/jumbotron.jpg" alt=""> -->
     <div class="button">
         <AppButton title="CURRENT SERIES"/>
     </div>
 </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
     .container {
+        background-image: url("../assets/img/jumbotron1.jpg");
         position: relative;
         background-size: cover;
+        background-repeat: no-repeat;
         width: 100%;
-        height: 40vh;
-        margin-bottom: 20px;
+        height: 50vh;
         .button{
             position: absolute;
             z-index: 9999;
-            top: 35%;
+            bottom:-10%;
             left: 10%;
         }
     }
+
 </style>
