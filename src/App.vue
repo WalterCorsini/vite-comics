@@ -1,14 +1,18 @@
 <script>
-import AppMain from "./components/AppMain.vue";
-import AppSubHeader from "./components/AppSubHeader.vue";
-import AppButton from "./components/AppButton.vue";
 import AppHeader from "./components/AppHeader.vue";
+import AppTopSubHeader from "./components/AppTopSubHeader.vue"
+import AppSubHeader from "./components/AppSubHeader.vue";
+import AppBlueRow from "./components/AppBlueRow.vue";
+import AppMain from "./components/AppMain.vue";
+import AppButton from "./components/AppButton.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
     components: {
         AppHeader,
         AppSubHeader,
+        AppTopSubHeader,
+        AppBlueRow,
         AppButton,
         AppMain,
         AppFooter,
@@ -100,64 +104,56 @@ export default {
     <AppHeader />
 
     <!-- top background subHeader -->
-    <div class="container">
-        <div class="background-subheader">
-            <div class="button-subheader">
-                <AppButton title="CURRENT SERIES"/>
-            </div>
-        </div>
-        
+    <div class="top-subheader">
+        <AppTopSubHeader />
+    </div>
+    
+
+     <div class="container">
         <!-- components subHeader -->
-        <div class="card-container"> 
+          <div class="card-container"> 
             <AppSubHeader
                 class="card"
                 v-for="curElem in arrayComics" :elemImage="curElem.thumb"
-                :elemSeries="curElem.series" />
-        </div>
-    </div>
+                :elemSeries="curElem.series" :elemType="curElem.type" />
+                
+                <!-- components button -->
+                <div class="bg-black">
+                <AppButton title="LOAD MORE"/>
+                </div>
+            </div>
+        </div> 
 
-    <!-- components button -->
-    <div class="bg-black">
-    <AppButton title="LOAD MORE"/>
-    </div>
-    <!-- components main -->
-    <AppMain />
+            <!-- appBlueRow -->
+            <AppBlueRow />
+
+            <!-- components main -->
+            <AppMain />
 
     <!-- components footer -->
     <AppFooter />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "./style/partials/variable" as *;
 @use "./style/partials/mixin" as *;
 
+.top-subheader{
+    height: 50vh;
+}
+
 .container {
-    width: 100%;
-    height: min-content;
+    height:min-content ;
     background-color: $black;
-    .background-subheader {
-        position: relative;
-        background-image: url(./assets/img/jumbotron.jpg);
-        height: 50vh;
-        background-size: cover;
-        margin-bottom: 20px;
-        .button-subheader{
-            position: absolute;
-            bottom: -7%;
-            left: 10%;
-        }
-    }
+    margin: 0;
 
     .card-container {
         @include flex(row, center, center);
         width: 80%;
+        padding-top: 30px;
         margin: 0 auto;
         flex-wrap: wrap;
         gap: 10px;
-    }
-
-    .card {
-        height: min-content;
     }
 }
 .bg-black{
